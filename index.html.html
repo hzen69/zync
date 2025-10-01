@@ -6,7 +6,7 @@
 <title>anime/donghua</title>
 <style>
 :root{
-  --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#ec6420;
+  --bg:#000000; --card:#0b1220; --muted:#9aa4b2; --accent:#ec6420;
   --glass: rgba(255,255,255,0.03);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
@@ -49,7 +49,6 @@ a.link{color:var(--accent);text-decoration:none}
 .empty{color:var(--muted);padding:28px;text-align:center;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
 .back-btn{margin-bottom:12px;padding:6px 10px;border-radius:6px;cursor:pointer}
 
-/* BUTTON STYLE FIX */
 .btn, .ep, .back-btn {
     background-color: #ec6420 !important;
     color: #000 !important;
@@ -59,7 +58,7 @@ a.link{color:var(--accent);text-decoration:none}
 </head>
 <body>
 <header>
-  <div class="brand" id="homeBtn">anime</div>
+  <div class="brand" id="homeBtn">nigh2zyyu</div>
   <div class="search">
     <input id="searchInput" placeholder="search anime or movie" />
     <button class="btn" id="btnClear">Clear</button>
@@ -81,15 +80,17 @@ const DATA = [
     id: 'm1', 
     title: 'Renegade Immortal', 
     genres: ['Action', 'Adventure'], 
+    status:'Ongoing',  
     thumb: 'https://i.postimg.cc/kDrS5ZMj/Wang-lin.jpg', 
-    desc: 'About Wang Lin.', 
+    desc: 'ewan basta bout kay wang ling.', 
     episodes: 1, 
-    episodesList: [{ ep:1, title:'Episode 1', src:'videos/renegade-ep1.mp4' }] 
+    episodesList: [{ ep:1, title:'Episode 1', src:'https//:' }] 
   },
   { 
     id:'m2', 
     title:'Zaiki`s Cultivation Path', 
     genres:['Historical','Harem'], 
+    status:'Hiatus',
     thumb:'https://i.postimg.cc/9XyYbJ7L/Levi.jpg', 
     desc:'Zaiki in different timelines.', 
     episodes:1, 
@@ -105,7 +106,17 @@ const DATA = [
     episodesList: [
       { ep:1, title:'Episode 1', src:'videos/babyy.mp4' },
       { ep:2, title:'Episode 2', src:'videos/babby2.mp4' },
-      { ep:3, title:'Episode 3', src:'videos/babyy3.mp4' }
+      { ep:3, title:'Episode 3', src:'videos/babyy3.mp4' }]
+  },
+  {
+    id:'m4',
+    title:'Battle Through The Heavens',
+    genres:['Action', 'Fantasy', 'Adventure', 'Martial Arts', ''],
+    thumb:'',
+    desc:'',
+    episodes: 1,
+    episodesList:[{ep:1, title:'Episode 1', src:''}]
+        
     ]
   }
 ];
