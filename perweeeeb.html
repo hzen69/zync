@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Personal Website</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #a2ff00;
+}
+
+/* Navigation Bar */
+.icon-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.icon-nav i {
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.icon-nav i:hover,
+.icon-nav i.active {
+    color: #a2ff00;
+    transform: scale(1.2);
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 30px;
+    animation: fade 0.4s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Section Titles */
+.section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Images */
+.profile-pic {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    color: #a2ff00;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation Icons -->
+<div class="icon-nav">
+    <i class="fa-solid fa-user active" onclick="showSection(0)" title="Profile"></i>
+    <i class="fa-solid fa-list" onclick="showSection(1)" title="Details"></i>
+    <i class="fa-solid fa-people-group" onclick="showSection(2)" title="Family"></i>
+    <i class="fa-solid fa-users" onclick="showSection(3)" title="Friends"></i>
+    <i class="fa-solid fa-gamepad" onclick="showSection(4)" title="Hobbies"></i>
+    <i class="fa-solid fa-address-book" onclick="showSection(5)" title="Contact"></i>
+</div>
+
+<div id="sections">
+
+<!-- PROFILE -->
+<div class="section active">
+    <h1>Student Profile</h1>
+    <img src="https://i.postimg.cc/bwBdZKbv/IMG-20251216-134241-1.jpg" class="profile-pic" alt="Profile Picture">
+    <p><strong>Name:</strong> Syrus Mateo Elejedo</p>
+    <p><strong>Age:</strong> 22</p>
+    <p><strong>Grade Level:</strong> 1st Year College</p>
+    <p><strong>School:</strong> Kolehiyo ng Lungsod ng Lipa</p>
+    <p>
+        <strong>Introduction:</strong> Hello! I’m Syrus Elejedo, a first-year BSCS student who is passionate about learning and exploring programming. I enjoy discovering how to code and how a computer program works and continuously improving my skills both academically and personally. I believe that dedication, patience, and curiosity are important in achieving my goals, and I strive to grow every day through my experiences in school and in life.
+    </p>
+</div>
+
+<!-- DETAILS -->
+<div class="section">
+    <h1>Detailed Information</h1>
+    <p><strong>Birthday:</strong> March 10, 2003</p>
+    <p><strong>Place of Birth:</strong> Quezon City</p>
+    <p><strong>Address:</strong> Lipa City, Batangas</p>
+
+    <p><strong>Academic Background:</strong></p>
+    <ul>
+        <li>Elementary School – Graduated at Manhac Elementary School</li>
+        <li>Junior High School – Graduated at San Isidro National High School</li>
+        <li>Senior High School – Graduated at Taysan Senior High School</li>
+    </ul>
+
+    <p><strong>Achievements:</strong></p>
+    <ul>
+        <li>Mr. Acquaintance</li>
+        <li>Honor Student</li>
+    </ul>
+</div>
+
+<!-- FAMILY -->
+<div class="section">
+    <h1>Family Members</h1>
+    <ul>
+        <li><strong>Mother – Rocel M. Elejedo:</strong> My loving and caring mother who always supports and motivates our family.</li>
+        <li><strong>Father – Danilo A. Elejedo:</strong> i don't have any information about my father because he left us when i was 3yrs old.</li>
+        <li><strong>Older Sister – Shiela Mae M. Elejedo:</strong> A supportive sister who gives guidance and encouragement.</li>
+        <li><strong>Younger Brother – Mikko James M. Elejedo:</strong> A cheerful sibling who brings joy and positivity to our home.</li>
+    </ul>
+</div>
+
+<!-- FRIENDS -->
+<div class="section">
+    <h1>Friends & Co-workers</h1>
+    <div class="gallery">
+        <img src="https://i.postimg.cc/Jz4RcPmM/1759703477252-1.jpg" alt="Friends">
+        <img src="https://i.postimg.cc/htR7KQF6/received-731861333272871-1.jpg" alt="Friends">
+    </div>
+    <p>
+        My friends are an important part of my life. They support me during difficult times, share happiness and laughter with me, and help me grow as a person. Through them, I learn the importance of friendship, teamwork, and respect.
+    </p>
+</div>
+
+<!-- HOBBIES -->
+<div class="section">
+    <h1>Hobbies</h1>
+    <div class="gallery">
+        <img src="https://i.postimg.cc/PxVWJL2g/IMG-20231020-103924-1.jpg" alt="Playing Guitar">
+        <img src="https://i.postimg.cc/gJ0czsSR/images-(18)-1.jpg" alt="Gaming">
+    </div>
+    <ul>
+        <li><strong>Playing Guitar:</strong> I play the guitar during my free time to relax, express my emotions, and improve my creativity.</li>
+        <li><strong>Playing Mobile Legends:</strong> I enjoy playing Mobile Legends because thats the only way i can play with my friends even if we are far from each others.</li>
+    </ul>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+    <h1>Contact & Social Media</h1>
+    <p><i class="fa-solid fa-envelope"></i>
+        <a href="mailto:srsljd@gmail.com"> srsljd@gmail.com</a>
+    </p>
+    <p><i class="fa-solid fa-phone"></i>
+        <a href="tel:09853828089"> 09853828089</a>
+    </p>
+    <p><i class="fa-brands fa-facebook"></i>
+        <a href="https://facebook.com/novnedys" target="_blank"> facebook.com/novnedys</a>
+    </p>
+</div>
+
+</div>
+
+<script>
+function showSection(n) {
+    const sections = document.querySelectorAll(".section");
+    const icons = document.querySelectorAll(".icon-nav i");
+
+    sections.forEach(sec => sec.classList.remove("active"));
+    icons.forEach(ic => ic.classList.remove("active"));
+
+    sections[n].classList.add("active");
+    icons[n].classList.add("active");
+}
+</script>
+
+</body>
+</html>
