@@ -31,7 +31,7 @@
         html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
         body{
             font-family:var(--font);
-            background:linear-gradient(180deg,#000000 0%,#ffffdab5 100%);
+            background:linear-gradient(180deg, #000000 0%, rgba(255, 255, 218, 0.71) 100%);
             color:var(--text);
             min-height:100vh;
             line-height:1.5;
@@ -336,27 +336,28 @@
     // ──────────────────────────────────────
     // DATA
     // ──────────────────────────────────────
+    // FIXED: removed the single quote from the Martial Master thumb URL
     const DATA = [
         {
             id: 'm1', title: 'Renegade Immortal', genres: ['Action', 'Adventure', 'Fantasy', 'Cultivation'],
             status: 'Ongoing', year: 2024, rating: 9.1,
             thumb: 'https://i.postimg.cc/kDrS5ZMj/Wang-lin.jpg',
             desc: 'Renegade Immortal follows the captivating story of Wang Lin, a young man born with a crippled soul. Undeterred by his limitations, Wang Lin embarks on a determined path to cultivate immortality and achieve unimaginable power.',
-            episodes: 76, episodesList: Array.from({ length: 76 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 76 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm2', title: 'Battle Through The Heavens', genres: ['Action', 'Fantasy', 'Adventure', 'Martial Arts'],
             status: 'Ongoing', year: 2023, rating: 9.3,
             thumb: 'https://i.postimg.cc/vHGwgpDY/66e6b345db533.jpg',
             desc: 'In a land where no magic is present, the strong make the rules and the weak obey. Xiao Yan, once a talented prodigy, suddenly lost everything — his powers, his reputation, and his promise to his mother.',
-            episodes: 120, episodesList: Array.from({ length: 120 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 120 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm3', title: 'Jewelleine Erish Ragucos', genres: ['Romance', 'Drama', 'Personal'],
             year: 2025, rating: 10,
             thumb: 'https://i.postimg.cc/598HYtY4/acc37696-225e-45a3-9c66-b5a1c7731d27.jpg',
             desc: 'I love you so much my babyy, my wife, my everything',
-            episodes: 3, episodesList: [
+            episodesList: [
                 { ep: 1, title: 'Episode 1', src: 'videos/babyy.mp4' },
                 { ep: 2, title: 'Episode 2', src: 'videos/babby2.mp4' },
                 { ep: 3, title: 'Episode 3', src: 'videos/babyy3.mp4' }
@@ -367,56 +368,57 @@
             year: 2024, rating: 8.7,
             thumb: 'https://i.postimg.cc/d33BdMYF/Qin-Mu-Tales-of-Herding-Gods-Legendary-Cultivator-Donghua.jpg',
             desc: 'A young boy discovers an ancient power within himself and embarks on an epic journey to become the legendary Herding God.',
-            episodes: 52, episodesList: Array.from({ length: 52 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 52 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm5', title: 'Martial Universe', genres: ['Action', 'Fantasy', 'Martial Arts'],
             year: 2023, rating: 8.5,
             thumb: 'https://i.postimg.cc/T2SR8RFV/𝙇𝙞𝙣-𝘿𝙤𝙣𝙜.jpg',
             desc: 'In the Martial Universe, strength reigns supreme. Follow Lin Dong as he uncovers ancient secrets and battles formidable foes.',
-            episodes: 80, episodesList: Array.from({ length: 80 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 80 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm6', title: 'Perfect World', genres: ['Action', 'Fantasy', 'Adventure', 'Epic'],
             year: 2024, rating: 9.0,
             thumb: 'https://i.postimg.cc/G2vpH54f/setad.jpg',
             desc: 'Born in a perfect world, Shi Hao must defy the heavens themselves. An epic tale of cultivation and sacrifice.',
-            episodes: 130, episodesList: Array.from({ length: 130 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 130 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm7', title: 'The Legend of Sky Lord', genres: ['Action', 'Fantasy', 'Cultivation'],
             year: 2024, rating: 8.3,
             thumb: 'https://i.postimg.cc/PqVtNkfW/shen-wu-tian-zun-shenwu-tianzun.jpg',
             desc: 'A fallen noble rises from the ashes to challenge the Sky Lord and rewrite the destiny of the nine heavens.',
-            episodes: 45, episodesList: Array.from({ length: 45 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 45 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm8', title: 'The Demon Hunter', genres: ['Action', 'Supernatural', 'Dark Fantasy'],
             year: 2025, rating: 8.8,
             thumb: 'https://i.postimg.cc/66cXYvGd/MENG-CHUAN-𝙰𝚣𝚞𝚛𝚎-𝙻𝚎𝚐𝚊𝚌𝚢-cang-yuan-tu-𝙳𝚘𝚗𝚐𝚑𝚞𝚊.jpg',
             desc: 'In a world overrun by demons, one hunter stands between humanity and extinction.',
-            episodes: 36, episodesList: Array.from({ length: 36 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 36 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm9', title: 'Jade Dynasty', genres: ['Action', 'Romance', 'Fantasy', 'Drama'],
             year: 2023, rating: 8.6,
             thumb: 'https://i.postimg.cc/9XPcqkpq/gui-li-𝑮𝒖𝒊-𝑳𝒊-𝑆𝒉𝑎𝑛𝑔-𝑋𝑖𝑎𝑜𝑓𝑎𝑛.jpg',
             desc: 'A tale of love, betrayal, and redemption set in a world of immortal cultivators.',
-            episodes: 60, episodesList: Array.from({ length: 60 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 60 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
             id: 'm10', title: 'Swallowed Star', genres: ['Sci-Fi', 'Action', 'Fantasy', 'Mecha'],
             year: 2024, rating: 9.2,
             thumb: 'https://i.postimg.cc/sxpVK67h/ggfxhcj.jpg',
             desc: 'In a post-apocalyptic Earth, Luo Feng rises to become humanity\'s greatest warrior.',
-            episodes: 95, episodesList: Array.from({ length: 95 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 95 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
+            // FIXED: removed the single quote from the thumb URL
             id: 'm11', title: 'Martial Master', genres: ['Action', 'Fantasy', 'Martial Arts', 'Cultivation'],
             year: 2023, rating: 8.1,
-            thumb: 'https://i.postimg.cc/76hGskZ5/Cin'-Cen'-Qin-Chen-qin-chen.jpg',
+            thumb: 'https://i.postimg.cc/76hGskZ5/Cin-Cen-Qin-Chen-qin-chen.jpg',
             desc: 'Qin Chen, once the greatest Martial Master, is reborn into a younger body. He must reclaim his former glory.',
-            episodes: 70, episodesList: Array.from({ length: 70 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
+            episodesList: Array.from({ length: 70 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         }
     ];
 
@@ -464,27 +466,46 @@
     homeBtn.addEventListener('click',()=>{ activeGenreFilter=null; navigateTo('#home'); });
     btnBookmarks.addEventListener('click',()=>{ activeGenreFilter=null; navigateTo('#bookmarks'); });
 
+    // ──────────────────────────────────────
+    // ROUTER — FIXED: robust hash handling
+    // ──────────────────────────────────────
     function render() {
-        const hash = location.hash || '#home';
-        const [path, qs] = hash.split('?');
-        const params = new URLSearchParams(qs||'');
-        if(path==='#home'||path==='#') renderHome();
-        else if(path==='#anime') renderAnimeDetail(params.get('id'));
-        else if(path==='#watch') renderWatch(params.get('id'), Number(params.get('ep')||1));
-        else if(path==='#latest') renderLatest();
-        else if(path==='#bookmarks') renderBookmarks();
-        else renderHome();
+        const raw = location.hash || '#home';
+        const hash = raw === '' ? '#home' : raw;
+        const path = hash.split('?')[0];
+        const qs = hash.includes('?') ? hash.split('?')[1] : '';
+        const params = new URLSearchParams(qs);
+
+        try {
+            if (path === '#home' || path === '#') renderHome();
+            else if (path === '#anime') renderAnimeDetail(params.get('id'));
+            else if (path === '#watch') renderWatch(params.get('id'), Number(params.get('ep')||1));
+            else if (path === '#latest') renderLatest();
+            else if (path === '#bookmarks') renderBookmarks();
+            else renderHome();
+        } catch (e) {
+            console.warn('Render error, falling back to home:', e);
+            renderHome();
+        }
     }
 
     function refreshCurrentView() {
-        const hash = location.hash || '#home';
-        const [path, qs] = hash.split('?');
-        const params = new URLSearchParams(qs||'');
-        if(path==='#home'||path==='#') renderHome(true);
-        else if(path==='#latest') renderLatest(true);
-        else if(path==='#bookmarks') renderBookmarks(true);
-        else if(path==='#anime') renderAnimeDetail(params.get('id'),true);
-        else if(path==='#watch') renderWatch(params.get('id'), Number(params.get('ep')||1),true);
+        const raw = location.hash || '#home';
+        const hash = raw === '' ? '#home' : raw;
+        const path = hash.split('?')[0];
+        const qs = hash.includes('?') ? hash.split('?')[1] : '';
+        const params = new URLSearchParams(qs);
+
+        try {
+            if (path === '#home' || path === '#') renderHome(true);
+            else if (path === '#latest') renderLatest(true);
+            else if (path === '#bookmarks') renderBookmarks(true);
+            else if (path === '#anime') renderAnimeDetail(params.get('id'), true);
+            else if (path === '#watch') renderWatch(params.get('id'), Number(params.get('ep')||1), true);
+        } catch (e) {
+            console.warn('Refresh error, falling back to home:', e);
+            renderHome(true);
+        }
     }
 
     // ──────────────────────────────────────
@@ -511,7 +532,7 @@
                   <img src="${a.thumb}" alt="${a.title}" loading="lazy">
                   <div class="hero-info">
                     <h2>${a.title}</h2>
-                    <div class="meta">${ICONS.star} ${a.rating} • ${a.genres.slice(0,2).join(' • ')} • ${a.episodes} eps</div>
+                    <div class="meta">${ICONS.star} ${a.rating} • ${a.genres.slice(0,2).join(' • ')} • ${a.episodesList.length} eps</div>
                     <p>${a.desc}</p>
                     <div class="hero-actions">
                       <button class="btn btn-primary" data-action="watch" data-id="${a.id}">${ICONS.play} Watch</button>
@@ -602,7 +623,8 @@
         let out=DATA;
         if(activeGenreFilter)out=out.filter(a=>a.genres.includes(activeGenreFilter));
         if(q)out=out.filter(a=>a.title.toLowerCase().includes(q)||a.genres.join(' ').toLowerCase().includes(q)||(a.desc&&a.desc.toLowerCase().includes(q)));
-        document.getElementById('resultCount').textContent=out.length;
+        const countEl = document.getElementById('resultCount');
+        if(countEl) countEl.textContent=out.length;
         grid.innerHTML=out.length===0?`<div class="empty">${ICONS.search} No results found.</div>`:out.map(a=>cardHTML(a)).join('');
         wireCardBookmarkButtons();
         document.querySelectorAll('#grid .card').forEach(c=>c.addEventListener('click',e=>{if(e.target.closest('.bookmark-btn'))return;navigateTo(`#anime?id=${c.dataset.id}`);}));
@@ -629,13 +651,14 @@
     function renderAnimeDetail(id,silent=false){
         const anime=DATA.find(a=>a.id===id)||DATA[0];
         const bookmarked=isBookmarked(anime.id),historyEntry=watchHistory[anime.id];
+        const totalEps = anime.episodesList.length;
         app.innerHTML=`
           <button class="back-btn" id="backBtn">${ICONS.arrowLeft} Back</button>
           <div class="detail">
             <div class="poster"><img src="${anime.thumb}" alt="${anime.title}"></div>
             <div class="detail-body">
               <h2>${anime.title} ${bookmarked?ICONS.star:''}</h2>
-              <div class="meta">${ICONS.star} ${anime.rating} • ${anime.genres.join(' • ')} • ${anime.episodes} eps • ${anime.status||'Ongoing'}</div>
+              <div class="meta">${ICONS.star} ${anime.rating} • ${anime.genres.join(' • ')} • ${totalEps} eps • ${anime.status||'Ongoing'}</div>
               <p class="desc">${anime.desc}</p>
               <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
                 <button class="btn btn-primary" id="btnWatchMain">${ICONS.play} ${historyEntry?`Continue Ep ${historyEntry.ep}`:'Watch Now'}</button>
@@ -649,23 +672,28 @@
         const startEp=historyEntry?historyEntry.ep:1;
         document.getElementById('btnWatchMain').addEventListener('click',()=>navigateTo(`#watch?id=${anime.id}&ep=${startEp}`));
         document.getElementById('btnToggleBookmark').addEventListener('click',()=>{toggleBookmark(anime.id);renderAnimeDetail(anime.id,true);});
-        const epsList=document.getElementById('epsList'),maxShow=Math.min(anime.episodesList.length,40);
+        const epsList=document.getElementById('epsList'),maxShow=Math.min(totalEps,40);
         epsList.innerHTML=anime.episodesList.slice(0,maxShow).map(ep=>`<div class="ep${ep.ep===startEp?' active':''}" data-ep="${ep.ep}" data-id="${anime.id}">Ep ${ep.ep}</div>`).join('');
-        if(anime.episodesList.length>maxShow)epsList.innerHTML+=`<div style="color:var(--muted);font-size:0.8rem;padding:6px">...and ${anime.episodesList.length-maxShow} more</div>`;
+        if(totalEps>maxShow)epsList.innerHTML+=`<div style="color:var(--muted);font-size:0.8rem;padding:6px">...and ${totalEps-maxShow} more</div>`;
         epsList.querySelectorAll('.ep').forEach(el=>el.addEventListener('click',()=>navigateTo(`#watch?id=${el.dataset.id}&ep=${el.dataset.ep}`)));
     }
 
-    function renderWatch(id,epNumber,silent=false){
-        const anime=DATA.find(a=>a.id===id)||DATA[0],ep=anime.episodesList[epNumber-1]||anime.episodesList[0],actualEp=ep.ep;
-        recordWatch(anime.id,actualEp);
-        const hasValidSrc=ep.src&&ep.src.length>5&&!ep.src.includes('https//:'),totalEps=anime.episodesList.length;
+    function renderWatch(id, epNumber, silent=false){
+        const anime=DATA.find(a=>a.id===id)||DATA[0];
+        const totalEps = anime.episodesList.length;
+        const safeEp = Math.min(Math.max(epNumber, 1), totalEps);
+        const ep = anime.episodesList[safeEp-1] || anime.episodesList[0];
+        const actualEp = ep.ep;
+        recordWatch(anime.id, actualEp);
+        const src = (ep.src || '').trim();
+        const hasValidSrc = src.length > 0 && !src.includes('https//:') && !src.includes('http//:');
         app.innerHTML=`
           <button class="back-btn" id="backBtn">${ICONS.arrowLeft} Back to ${anime.title}</button>
           <div class="watch-layout">
             <div class="watch-main">
               <div class="video-wrap">
-                ${hasValidSrc?`<video id="player" controls playsinline preload="metadata" autofocus><source src="${ep.src}" type="video/mp4"></video>`
-                :`<div class="video-placeholder">${ICONS.clapper} <span>Video source not available</span><span style="font-size:0.75rem;opacity:0.6">${anime.title} — ${ep.title}</span></div>`}
+                ${hasValidSrc ? `<video id="player" controls playsinline preload="metadata" autofocus><source src="${src}" type="video/mp4"></video>`
+                : `<div class="video-placeholder">${ICONS.clapper} <span>Video source not available</span><span style="font-size:0.75rem;opacity:0.6">${anime.title} — ${ep.title}</span></div>`}
               </div>
               <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
                 <div><strong>${anime.title}</strong><span style="color:var(--muted);margin-left:6px">— ${ep.title}</span></div>
