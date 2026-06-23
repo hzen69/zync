@@ -130,11 +130,40 @@
             .hero-card{flex:0 0 85vw}
         }
         @media(max-width:540px){
-            .grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))!important;gap:10px!important}
-            .hero-card{flex:0 0 90vw;padding:10px}
-            .hero-card img{width:70px;height:50px}
-            .detail{flex-direction:column}
-            video{height:240px!important}
+            /* Force exactly 3 columns on mobile */
+            .grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 8px !important;
+            }
+            .card-body {
+                padding: 6px 4px !important;
+            }
+            .card-body .title {
+                font-size: 0.65rem !important;
+            }
+            .card-body .small {
+                font-size: 0.55rem !important;
+            }
+            .card-badge {
+                font-size: 0.5rem !important;
+                padding: 1px 4px !important;
+                top: 4px !important;
+                right: 4px !important;
+            }
+            .bookmark-btn {
+                width: 20px !important;
+                height: 20px !important;
+                top: 4px !important;
+                left: 4px !important;
+                font-size: 0.6rem !important;
+            }
+            .thumb-wrap {
+                aspect-ratio: 3/4;
+            }
+            .hero-card { flex: 0 0 90vw; padding: 10px; }
+            .hero-card img { width: 70px; height: 50px; }
+            .detail { flex-direction: column; }
+            video { height: 240px !important; }
         }
         aside{
             background:var(--card);padding:14px;border-radius:var(--radius);
@@ -336,7 +365,6 @@
     // ──────────────────────────────────────
     // DATA
     // ──────────────────────────────────────
-    // FIXED: removed the single quote from the Martial Master thumb URL
     const DATA = [
         {
             id: 'm1', title: 'Renegade Immortal', genres: ['Action', 'Adventure', 'Fantasy', 'Cultivation'],
@@ -413,7 +441,6 @@
             episodesList: Array.from({ length: 95 }, (_, i) => ({ ep: i + 1, title: `Episode ${i + 1}`, src: '' }))
         },
         {
-            // FIXED: removed the single quote from the thumb URL
             id: 'm11', title: 'Martial Master', genres: ['Action', 'Fantasy', 'Martial Arts', 'Cultivation'],
             year: 2023, rating: 8.1,
             thumb: 'https://i.postimg.cc/76hGskZ5/Cin-Cen-Qin-Chen-qin-chen.jpg',
@@ -467,7 +494,7 @@
     btnBookmarks.addEventListener('click',()=>{ activeGenreFilter=null; navigateTo('#bookmarks'); });
 
     // ──────────────────────────────────────
-    // ROUTER — FIXED: robust hash handling
+    // ROUTER
     // ──────────────────────────────────────
     function render() {
         const raw = location.hash || '#home';
